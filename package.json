@@ -1,0 +1,20 @@
+{
+  "name": "mia-dose-wallet",
+  "version": "1.0.0",
+  "description": "Server that generates Apple Wallet (.pkpass) loyalty cards for Mia Dose customers",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "passkit-generator": "^3.2.0",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
