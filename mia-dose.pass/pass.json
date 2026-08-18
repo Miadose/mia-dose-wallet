@@ -1,0 +1,35 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.miadose.loyalty",
+  "teamIdentifier": "35BT9NFCL5",
+  "organizationName": "Mia Dose",
+  "description": "Mia Dose Loyalty Card",
+  "logoText": "",
+  "backgroundColor": "rgb(255, 255, 255)",
+  "foregroundColor": "rgb(20, 20, 20)",
+  "labelColor": "rgb(90, 90, 90)",
+
+  "storeCard": {
+    "headerFields": [
+      {
+        "key": "name",
+        "label": "NAME",
+        "value": "customerName_placeholder"
+      }
+    ],
+    "primaryFields": [
+      {
+        "key": "forename",
+        "label": "FIRST NAME",
+        "value": "customerName_placeholder"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "terms",
+        "label": "شكراً لكم",
+        "value": "أظهر هذي البطاقة عند الكاشير لتسجيل زيارتك مع Mia Dose."
+      }
+    ]
+  }
+}
