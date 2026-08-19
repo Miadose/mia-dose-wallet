@@ -21,9 +21,15 @@ async function generatePass({ customerName, customerId }) {
       model: path.join(__dirname, "mia-dose.pass"),
       certificates,
     },
-    {
+       {
       serialNumber: customerId,
       description: `Mia Dose Loyalty Card - ${customerName}`,
+      passTypeIdentifier: "pass.com.miadose.loyalty",
+      teamIdentifier: "35BT9NFCL5",
+      organizationName: "Mia Dose",
+      backgroundColor: "rgb(255, 255, 255)",
+      foregroundColor: "rgb(20, 20, 20)",
+      labelColor: "rgb(90, 90, 90)",
     }
   );
     pass.type = "storeCard";
