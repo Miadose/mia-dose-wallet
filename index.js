@@ -32,12 +32,12 @@ app.get("/generate-pass", async (req, res) => {
 
     const buffer = await generatePass({ customerName: name, customerId: id });
 
-       res.set({
+          res.writeHead(200, {
       "Content-Type": "application/vnd.apple.pkpass",
-      "Content-Disposition": `attachment; filename=mia-dose-${id}.pkpass`,
+      "Content-Disposition": `attachment; filename="mia-dose-${id}.pkpass"`,
       "Content-Length": buffer.length,
     });
-    res.send(buffer);
+    res.end(buffer);
   } catch (err) {
     console.error("خطأ أثناء توليد البطاقة:", err);
        res.status(500).json({ error: "فشل توليد البطاقة", details: err.message, stack: err.stack });
