@@ -24,7 +24,7 @@ async function generatePass({ customerName, customerId }) {
        {
       serialNumber: customerId,
       description: `Mia Dose Loyalty Card - ${customerName}`,
-      passTypeIdentifier: "pass.com.miadose.loyalty",
+      passTypeIdentifier: "pass.com.mycompany.miadose",
       teamIdentifier: "35BT9NFCL5",
       organizationName: "Mia Dose",
       backgroundColor: "rgb(255, 255, 255)",
