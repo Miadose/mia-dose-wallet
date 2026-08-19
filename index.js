@@ -32,9 +32,10 @@ app.get("/generate-pass", async (req, res) => {
 
     const buffer = await generatePass({ customerName: name, customerId: id });
 
-    res.set({
+       res.set({
       "Content-Type": "application/vnd.apple.pkpass",
       "Content-Disposition": `attachment; filename=mia-dose-${id}.pkpass`,
+      "Content-Length": buffer.length,
     });
     res.send(buffer);
   } catch (err) {
