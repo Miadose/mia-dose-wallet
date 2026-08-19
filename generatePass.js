@@ -35,7 +35,6 @@ async function generatePass({ customerName, customerId }) {
     pass.type = "storeCard";
 
   pass.headerFields.push({ key: "name", label: "NAME", value: customerName });
-  pass.primaryFields.push({ key: "forename", label: "FIRST NAME", value: customerName });
 
   pass.setBarcodes({
     message: customerId,
