@@ -35,7 +35,12 @@ async function generatePass({ customerName, customerId }) {
     pass.type = "storeCard";
 
   pass.headerFields.push({ key: "name", label: "NAME", value: customerName });
-
+  pass.secondaryFields.push({
+    key: "brand",
+    label: "Share an experience",
+    value: "Mia Dose",
+    textAlignment: "PKTextAlignmentLeft",
+  });
   pass.setBarcodes({
     message: customerId,
     format: "PKBarcodeFormatQR",
