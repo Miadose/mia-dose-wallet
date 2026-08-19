@@ -39,7 +39,7 @@ app.get("/generate-pass", async (req, res) => {
     res.send(buffer);
   } catch (err) {
     console.error("خطأ أثناء توليد البطاقة:", err);
-    res.status(500).json({ error: "فشل توليد البطاقة", details: err.message });
+       res.status(500).json({ error: "فشل توليد البطاقة", details: err.message, stack: err.stack });
   }
 });
 
