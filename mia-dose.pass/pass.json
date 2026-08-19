@@ -1,13 +1,5 @@
 {
   "formatVersion": 1,
-  "passTypeIdentifier": "pass.com.miadose.loyalty",
-  "teamIdentifier": "35BT9NFCL5",
-  "organizationName": "Mia Dose",
-  "description": "Mia Dose Loyalty Card",
-  "backgroundColor": "rgb(255, 255, 255)",
-  "foregroundColor": "rgb(20, 20, 20)",
-  "labelColor": "rgb(90, 90, 90)",
-
   "storeCard": {
     "headerFields": [
       {
@@ -28,10 +20,6 @@
         "key": "terms",
         "label": "Thank you",
         "value": "Show this card at checkout to register your visit with Mia Dose."
-      }
-    ]
-  }
-}
       }
     ]
   }
