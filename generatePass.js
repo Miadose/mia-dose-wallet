@@ -11,15 +11,15 @@ async function generatePass({ customerName, customerId }) {
   const signerCert = fs.readFileSync(path.join(certsDir, "signerCert.pem"));
   const signerKey = fs.readFileSync(path.join(certsDir, "signerKey.pem"));
 
+  const certificates = { wwdr, signerCert, signerKey };
+  if (process.env.CERT_PASSPHRASE) {
+    certificates.signerKeyPassphrase = process.env.CERT_PASSPHRASE;
+  }
+
   const pass = await PKPass.from(
     {
       model: path.join(__dirname, "mia-dose.pass"),
-      certificates: {
-        wwdr,
-        signerCert,
-        signerKey,
-        signerKeyPassphrase: process.env.CERT_PASSPHRASE || "",
-      },
+      certificates,
     },
     {
       serialNumber: customerId,
